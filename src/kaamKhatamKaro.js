@@ -9,7 +9,7 @@ const kaamKhatamkaro = async (event) => {
   const { id } = event.pathParameters;
 
   await dynamoDb.update({
-    TableName: "KaamKaro2",
+    TableName: "KaamKaro",
     Key: { id },
     UpdateExpression: "set completed = :completed",
     ExpressionAttributeValues: {":completed": completed},
